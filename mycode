@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<iostream>
+using namespace std;
+int main()
+{
+	cout<<"一个有序的整型数组:"<<endl;
+	int a[6];
+	for(int i=0;i<5;i++)
+	{
+		cin>>a[i];
+	}
+	cout<<"插入一个整数:";
+	int b;
+	cin>>b;
+	int i=4;
+	for(;i>=0&&a[i]>b;i--)
+	{
+		a[i+1]=a[i];
+	}
+	a[i+1]=b;
+	cout<<"插入后：";
+	for(int j=0;j<6;j++)
+	{
+		cout<<a[j]<<" ";
+	}
+	return 0;
+}
